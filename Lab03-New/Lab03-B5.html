@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab03-ex5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 50px;
+            background-color: #f9f9f9;
+        }
+        .product-card {
+            width: 250px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #e74c3c;
+            color: #ffffff;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 20px;
+        }
+        .product-name {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333333;
+            margin: 0 0 10px 0;
+        }
+        .product-price {
+            font-size: 14px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="product-card">
+        <div class="badge">SALE</div>
+        <!-- Thay src bằng link ảnh áo thun thực tế của bạn -->
+        <img src="../images/aothun.jpg" alt="Áo Thun Cổ Trụ">
+        <p class="product-name">Áo Thun Cổ Trụ</p>
+        <p class="product-price">250.000đ</p>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo tài khoản - Google</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .register-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            text-align: center;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4285f4;
+            margin-bottom: 10px;
+        }
+        .logo span:nth-child(1) { color: #ea4335; }
+        .logo span:nth-child(2) { color: #fbbc05; }
+        .logo span:nth-child(3) { color: #4285f4; }
+        .logo span:nth-child(4) { color: #34a853; }
+        h1 {
+            font-size: 24px;
+            font-weight: 400;
+            color: #202124;
+            margin: 0 0 10px 0;
+        }
+        p {
+            color: #5f6368;
+            font-size: 16px;
+            margin: 0 0 30px 0;
+        }
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        input[type="text"], 
+        input[type="password"] {
+            width: 100%;
+            padding: 13px 15px;
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+            transition: border 0.2s;
+        }
+        .full-width {
+            margin-bottom: 20px;
+        }
+        input:focus {
+            border: 2px solid #1a73e8;
+            padding: 12px 14px;
+        }
+        .actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="register-card">
+        <div class="logo">
+            G<span>o</span><span>o</span>g<span>l</span><span>e</span>
+        </div>
+        <h1>Tạo Tài khoản của bạn</h1>
+        <p>Tiếp tục khám phá các dịch vụ</p>
+        
+        <form action="#" method="POST">
+            <div class="input-group">
+                <input type="text" placeholder="Họ" required>
+                <input type="text" placeholder="Tên" required>
+            </div>
+            
+            <div class="full-width">
+                <input type="text" placeholder="Tên người dùng" required>
+            </div>
+
+            <div class="input-group">
+                <input type="password" placeholder="Mật khẩu" required>
+                <input type="password" placeholder="Xác nhận" required>
+            </div>
+            
+            <div class="actions">
+                <a href="dangnhap.html">Đăng nhập thay thế</a>
+                <button type="submit">Tiếp theo</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
