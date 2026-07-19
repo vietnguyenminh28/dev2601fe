@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex6</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .sidebar-widget {
+            width: 320px;
+            background-color: #eaf4eb;
+            box-sizing: border-box;
+        }
+
+        .widget-header {
+            background-color: #119e48;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 15px;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .widget-content {
+            padding: 0 15px;
+        }
+
+        .news-item {
+            display: flex;
+            align-items: flex-start;
+            padding: 15px 0;
+            border-bottom: 1px solid #d4e8d5;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-thumb {
+            width: 70px;
+            height: 55px;
+            flex-shrink: 0;
+            margin-right: 12px;
+            border: 1px solid #cccccc;
+            background-color: #ffffff;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+        }
+
+        .news-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .news-title {
+            color: #444444;
+            font-size: 14px;
+            line-height: 1.4;
+            margin: 0;
+            transition: color 0.2s ease;
+        }
+
+        .news-item:hover .news-title {
+            color: #119e48;
+        }
+
+        .news-item:hover .news-thumb {
+            border-color: #119e48;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar-widget">
+        <h3 class="widget-header">Tin tức mới nhất</h3>
+        <div class="widget-content">
+            <a href="#" class="news-item" title="Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Chế phẩm hóa học">
+                </div>
+                <p class="news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</p>
+            </a>
+
+            <a href="#" class="news-item">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Pháo hoa">
+                </div>
+                <p class="news-title">Hóa học đằng sau pháo hoa cầm tay</p>
+            </a>
+
+            <a href="#" class="news-item">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1582719202047-76d34326168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Xút công nghiệp">
+                </div>
+                <p class="news-title">Ứng dụng của xút trong công nghiệp - xút chuẩn hàng tốt</p>
+            </a>
+
+            <a href="#" class="news-item">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Hóa chất XÚT">
+                </div>
+                <p class="news-title">Những lợi ích và mối nguy hiểm khi sử dụng hóa chất XÚT (NaOH)</p>
+            </a>
+
+            <a href="#" class="news-item">
+                <div class="news-thumb">
+                    <img src="https://images.unsplash.com/photo-1614935151651-0bea6508ab07?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Sodium hydroxide">
+                </div>
+                <p class="news-title">Cung Cấp Hóa chất Sodium hydroxide 99% – Xút Vảy Trung Quốc</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

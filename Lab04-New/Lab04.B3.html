@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #333;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
+            margin: 0;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 2px;
+            background-color: #2ea043;
+        }
+
+        .services-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            max-width: 1100px;
+            padding: 0 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+        }
+
+        .card-1 {
+            background-image: url('https://images.unsplash.com/photo-1519003722811-9ca9f076c8bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .card-2 {
+            background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .card-3 {
+            background-image: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(20, 30, 48, 0.65);
+            transition: background-color 0.3s ease;
+        }
+
+        .card:hover .overlay {
+            background-color: rgba(46, 160, 67, 0.85);
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .icon-box {
+            transform: translateY(-5px);
+        }
+
+        .icon-box svg {
+            width: 26px;
+            height: 26px;
+            fill: #2ea043;
+        }
+
+        .service-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0 0 5px 0;
+        }
+
+        .service-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 15px 0;
+        }
+
+        .btn-detail {
+            padding: 6px 20px;
+            border: 1px solid white;
+            border-radius: 20px;
+            background: transparent;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .btn-detail {
+            background-color: #f39c12;
+            border-color: #f39c12;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="section-header">
+        <h2 class="section-title">Dịch Vụ</h2>
+    </div>
+
+    <div class="services-container">
+        
+        <div class="card card-1">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+                    </svg>
+                </div>
+                <p class="service-label">Dịch vụ</p>
+                <h3 class="service-title">Vận tải nội địa</h3>
+                <button class="btn-detail">Chi tiết</button>
+            </div>
+        </div>
+
+        <div class="card card-2">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 14H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                </div>
+                <p class="service-label">Dịch vụ</p>
+                <h3 class="service-title">Uỷ thác xuất nhập khẩu</h3>
+                <button class="btn-detail">Chi tiết</button>
+            </div>
+        </div>
+
+        <div class="card card-3">
+            <div class="overlay"></div>
+            <div class="content">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
+                        <path d="M7 9h10v2H7zm0-3h10v2H7z"/>
+                    </svg>
+                </div>
+                <p class="service-label">Dịch vụ</p>
+                <h3 class="service-title">Tư vấn xuất khẩu lao động</h3>
+                <button class="btn-detail">Chi tiết</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

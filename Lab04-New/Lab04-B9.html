@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #8cc63f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #00a651;
+            font-size: 22px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .btn-view-all {
+            background-color: #fff200;
+            color: #00a651;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .btn-view-all svg {
+            width: 12px;
+            height: 12px;
+            fill: #00a651;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-card {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            background-color: #00a651;
+        }
+
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover .img-overlay {
+            opacity: 1;
+        }
+
+        .btn-more {
+            color: #fff200;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .product-info {
+            padding: 12px 15px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+            min-height: 40px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            margin-top: auto;
+        }
+
+        .price-view-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-text {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .icon-text svg {
+            width: 12px;
+            height: 12px;
+            fill: #ffffff;
+        }
+
+        .btn-buy {
+            background-color: #fff200;
+            color: #00a651;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-buy svg {
+            width: 10px;
+            height: 10px;
+            fill: #00a651;
+        }
+    </style>
+</head>
+<body>
+    <div class="section-container">
+        <div class="section-header">
+            <h2 class="section-title">Phân bón vi sinh</h2>
+            <a href="#" class="btn-view-all">
+                Xem tất cả 
+                <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+            </a>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Phân bón vi sinh Thành Châu">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Phân bón vi sinh Thành Châu<br>(Azotobacterin)</h3>
+                    <div class="product-footer">
+                        <div class="price-view-group">
+                            <span class="icon-text">
+                                <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.41l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.41zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+                                Liên hệ giá
+                            </span>
+                            <span class="icon-text">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+                                193
+                            </span>
+                        </div>
+                        <button class="btn-buy">
+                            Mua hàng
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590212356877-e685f0b540fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hoa lan">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sản phẩm đang cập nhật ...</h3>
+                    <div class="product-footer">
+                        <span class="icon-text">
+                            <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.41l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.41zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+                            0.000 đ
+                        </span>
+                        <button class="btn-buy">
+                            Mua hàng
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590212356877-e685f0b540fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hoa lan">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sản phẩm đang cập nhật ...</h3>
+                    <div class="product-footer">
+                        <span class="icon-text">
+                            <svg viewBox="0 0 24 24"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.41l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.41zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/></svg>
+                            0.000 đ
+                        </span>
+                        <button class="btn-buy">
+                            Mua hàng
+                            <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .product-box {
+            position: relative;
+            width: 260px;
+            padding: 20px 10px;
+            border: 2px solid #ff9800;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #fdfdfd;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .product-name {
+            color: #555;
+            font-size: 15px;
+            margin: 0 0 10px 0;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            color: #000;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            background-color: #ff9800;
+            clip-path: polygon(100% 0, 0 0, 100% 100%);
+        }
+
+        .check-icon {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-block;
+            transform-origin: center;
+        }
+
+        .product-box:hover .check-icon {
+            animation: shake 0.4s ease-in-out infinite alternate;
+        }
+
+        @keyframes shake {
+            0% { transform: rotate(0deg); }
+            33% { transform: rotate(-25deg) scale(1.2); }
+            66% { transform: rotate(25deg) scale(1.2); }
+            100% { transform: rotate(0deg) scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-box">
+        <div class="badge"></div>
+        <span class="check-icon">✔</span>
+        <div class="product-name">Macbook Air M4 | core <br> GPU + 512GB</div>
+        <div class="product-price">28.790.000 VNĐ</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .col-left, .col-right {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #27ae60;
+        }
+
+        .intro-text {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-detail {
+            display: inline-block;
+            padding: 6px 15px;
+            border: 1px solid #27ae60;
+            color: #27ae60;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .btn-detail:hover {
+            background-color: #27ae60;
+            color: #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+        }
+
+        .feature-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: #27ae60;
+            stroke-width: 1.5;
+        }
+
+        .feature-title {
+            font-size: 13px;
+            color: #27ae60;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .feature-desc {
+            font-size: 12px;
+            color: #777;
+            margin: 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col-left">
+            <h2 class="section-title">Giới thiệu</h2>
+            <p class="intro-text">
+                CÔNG TY CP GEMACHEM VIỆT NAM thành lập năm 2007. Lĩnh vực kinh doanh chính là hóa chất công nghiệp và phân bón vô cơ. 100% hàng hóa nhập khẩu chính ngạch. Thị trường trải khắp cả nước. Khách hàng là các nhà máy, các khu công nghiệp, các nông trại, trang trại, các đại lý phân bón...
+            </p>
+            <a href="#" class="btn-detail">Chi tiết ></a>
+        </div>
+        <div class="col-right">
+            <h2 class="section-title">Tại sao chọn Gemachem</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">Hóa chất chính hãng</h3>
+                        <p class="feature-desc">100% hàng hóa nhập khẩu chính ngạch</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">Phân phối rộng khắp</h3>
+                        <p class="feature-desc">Thị trường trải khắp cả nước</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">Vận chuyển linh hoạt</h3>
+                        <p class="feature-desc">Vận chuyển hàng hóa linh hoạt</p>
+                    </div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div>
+                        <h3 class="feature-title">Khách hàng</h3>
+                        <p class="feature-desc">Khách hàng đối tác tin cậy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

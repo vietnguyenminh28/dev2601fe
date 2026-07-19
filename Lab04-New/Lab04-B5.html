@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex5</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .news-section {
+            width: 900px;
+            background-color: #f2f2f2;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin: 0 0 25px 0;
+            position: relative;
+            padding-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #2ea043;
+        }
+
+        .news-wrapper {
+            display: flex;
+            gap: 30px;
+        }
+
+        .main-news {
+            flex: 1;
+        }
+
+        .main-news-img {
+            width: 100%;
+            background-color: #fff;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .main-news-img img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .main-news-title {
+            font-size: 20px;
+            color: #2c3e50;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .news-meta svg {
+            width: 14px;
+            height: 14px;
+            fill: none;
+            stroke: #2ea043;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            margin-right: 6px;
+        }
+
+        .main-news-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .side-news {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-news-item {
+            display: flex;
+            gap: 15px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .side-news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .side-news-img {
+            width: 130px;
+            flex-shrink: 0;
+        }
+
+        .side-news-img img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+            display: block;
+            border-radius: 4px;
+        }
+
+        .side-news-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .side-news-title {
+            font-size: 15px;
+            color: #444;
+            margin: 0 0 8px 0;
+            font-weight: bold;
+            line-height: 1.3;
+        }
+        
+        .side-news-content .news-meta {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-section">
+        <h2 class="section-title">Tin Tức</h2>
+        
+        <div class="news-wrapper">
+            <div class="main-news">
+                <div class="main-news-img">
+                    <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chế phẩm hóa học">
+                </div>
+                <h3 class="main-news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</h3>
+                <div class="news-meta">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    06/06/2019
+                </div>
+                <p class="main-news-desc">NaOH hay còn được gọi dưới cái tên Sodium hydroxide, tên gọi trong hóa học là Natri Hydroxit. Các dạng cấu trúc: xút vảy, xút hạt, xút lỏng....</p>
+            </div>
+
+            <div class="side-news">
+                <div class="side-news-item">
+                    <div class="side-news-img">
+                        <img src="https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Pháo hoa">
+                    </div>
+                    <div class="side-news-content">
+                        <h4 class="side-news-title">Hóa học đằng sau pháo hoa cầm tay</h4>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            05/06/2019
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-news-item">
+                    <div class="side-news-img">
+                        <img src="https://images.unsplash.com/photo-1582719202047-76d34326168e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Xút">
+                    </div>
+                    <div class="side-news-content">
+                        <h4 class="side-news-title">Ứng dụng của xút trong công nghiệp - xút chuẩn hàng tốt</h4>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            05/06/2019
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-news-item">
+                    <div class="side-news-img">
+                        <img src="https://images.unsplash.com/photo-1614935151651-0bea6508ab07?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Hóa chất">
+                    </div>
+                    <div class="side-news-content">
+                        <h4 class="side-news-title">Cung Cấp Hóa chất Sodium hydroxide 99% – Xút Vảy Trung</h4>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            05/06/2019
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-news-item">
+                    <div class="side-news-img">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="XÚT">
+                    </div>
+                    <div class="side-news-content">
+                        <h4 class="side-news-title">Những lợi ích và mối nguy hiểm khi sử dụng hóa chất XÚT (NaOH)</h4>
+                        <div class="news-meta">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            05/06/2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
