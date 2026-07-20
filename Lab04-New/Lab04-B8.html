@@ -35,12 +35,14 @@
             margin-bottom: 25px;
         }
 
+        /* Đổi style logo từ định dạng SVG sang dạng text/emoji */
         .logo-icon {
             width: 45px;
             height: 45px;
-            fill: none;
-            stroke: #ffd700;
-            stroke-width: 2;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .company-name {
@@ -93,6 +95,7 @@
             gap: 12px;
         }
 
+        /* Thêm font-weight và color để chữ cái bên trong đẹp hơn */
         .social-icon {
             width: 32px;
             height: 32px;
@@ -102,12 +105,9 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
-        }
-
-        .social-icon svg {
-            width: 15px;
-            height: 15px;
-            fill: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+            color: #ffffff;
         }
         
         .map-wrapper {
@@ -127,11 +127,12 @@
 </head>
 <body>
     <div class="footer-container">
+        
+        <!-- Cột 1: Thông tin công ty -->
         <div class="col-1">
             <div class="company-header">
-                <svg class="logo-icon" viewBox="0 0 24 24">
-                    <path d="M12 2L2 22h20L12 2zm0 3.5l7.5 15h-15L12 5.5z"/>
-                </svg>
+                <!-- Thay SVG bằng Emoji -->
+                <div class="logo-icon">🌱</div>
                 <h2 class="company-name">Công ty TNHH<br>Công nghệ xanh<br>Thành Châu</h2>
             </div>
             
@@ -156,6 +157,7 @@
             </div>
         </div>
         
+        <!-- Cột 2: Sản phẩm & Mạng xã hội -->
         <div class="col-2">
             <h3 class="widget-title">Danh mục sản phẩm</h3>
             <ul class="product-list">
@@ -166,27 +168,22 @@
             
             <h3 class="widget-title">Liên kết mạng xã hội</h3>
             <div class="social-links">
-                <div class="social-icon">
-                    <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-                </div>
-                <div class="social-icon">
-                    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-                </div>
-                <div class="social-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33 2.78 2.78 0 001.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.33 29 29 0 00-.46-5.33zM9.75 15.02V8.48L15.5 11.75l-5.75 3.27z"/></svg>
-                </div>
-                <div class="social-icon">
-                    <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
-                </div>
+                <!-- Thay SVG bằng các chữ cái đại diện -->
+                <div class="social-icon">F</div>
+                <div class="social-icon">Z</div>
+                <div class="social-icon">Y</div>
+                <div class="social-icon">in</div>
             </div>
         </div>
         
+        <!-- Cột 3: Bản đồ -->
         <div class="col-3">
             <h3 class="widget-title">Bản đồ</h3>
             <div class="map-wrapper">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.294868019313!2d105.88242487499933!3d20.9808129806563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ae8729352e85%3A0xc34cc42ec8fb2070!2zTMOobmggTmFtLCBIb8OgbmcgTWFpLCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
+
     </div>
 </body>
 </html>
