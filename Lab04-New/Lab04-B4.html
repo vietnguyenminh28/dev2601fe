@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab04-ex4</title>
+    <title>Lab04-ex4 (Tối giản)</title>
     <style>
         body {
-            display: flex;
+            display:flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
             background-color: #fff;
+
         }
 
         .news-container {
@@ -64,20 +65,10 @@
         .news-meta {
             display: flex;
             align-items: center;
+            gap: 6px; /* Thay thế cho margin-right của svg cũ */
             font-size: 13px;
             color: #888;
             margin-bottom: 15px;
-        }
-
-        .news-meta svg {
-            width: 16px;
-            height: 16px;
-            fill: none;
-            stroke: #4caf50;
-            stroke-width: 2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            margin-right: 6px;
         }
 
         .news-desc {
@@ -93,17 +84,14 @@
         <h2 class="section-title">TIN TỨC</h2>
         
         <div class="news-image">
-            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chế phẩm hóa học" title="Chế phẩm hóa học là gì? Và">
+            <img src="../images/b4.avif" alt="Chế phẩm hóa học" title="Chế phẩm hóa học là gì? Và">
         </div>
 
         <h3 class="news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</h3>
         
+        <!-- Thay SVG bằng Emoji trực quan -->
         <div class="news-meta">
-            <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-            </svg>
-            06/06/2019
+            🕒 06/06/2019
         </div>
         
         <p class="news-desc">NaOH hay còn được gọi dưới cái tên Sodium hydroxide, tên gọi trong hóa học là Natri Hydroxit. Các dạng cấu trúc: xút vảy, xút hạt, xút lỏng....</p>

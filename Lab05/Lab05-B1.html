@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06-ex1</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .login-box {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 30px 40px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #4CAF50;
+            border-radius: 25px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .checkbox-group {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .btn-login {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            padding: 12px;
+            width: 100%;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .btn-login:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Login information</h2>
+        
+        <form id="frmLogin">
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember me</label>
+            </div>
+            
+            <button type="button" class="btn-login" onclick="validateLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLogin() {
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+
+            if (user === "admin" && pass === "123456") {
+                alert("Welcome to world of JavaScript");
+            } else {
+                alert("Invalid Username or password");
+            }
+        }
+    </script>
+
+</body>
+</html>
