@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giao diện trang mẫu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+        .box {
+            border: 1px solid #70ad70;
+            text-align: center;
+            padding-top: 5px;
+            background-color: #fff;
+        }
+        header {
+            height: 100px;
+        }
+        nav {
+            height: 30px;
+        }
+        .main-content {
+            display: flex;
+            gap: 6px;
+            height: 400px;
+        }
+        .left, .right {
+            flex: 1.5;
+        }
+        .body-center {
+            flex: 5;
+        }
+        footer {
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header class="box">header</header>
+        
+        <nav class="box">Nav</nav>
+        
+        <div class="main-content">
+            <aside class="box left">Left</aside>
+            <main class="box body-center">Body</main>
+            <aside class="box right">Right</aside>
+        </div>
+        
+        <footer class="box">footer</footer>
+    </div>
+
+</body>
+</html>

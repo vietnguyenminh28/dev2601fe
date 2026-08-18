@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành tổng hợp Jquery - Quản lý Sản Phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>QUẢN LÝ THÔNG TIN SẢN PHẨM</h1>
+    </header>
+    <section>
+        <!-- Chức năng / danh sách -->
+        <div class="box box-left">
+            <div class="form-group" role="form">
+                <button class="btn btn-add">Thêm mới sản phẩm</button>
+                <input type="search" name="keyword" placeholder="Nhập tên SP cần tìm....">
+                <button class="btn">Tìm kiếm</button>
+            </div>
+            <!-- Danh sách sản phẩm -->
+            <div class="list">
+                <h2>Danh sách sản phẩm</h2>
+                <table cellspacing="0" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Hình ảnh</th>
+                            <th>Mã SP</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Trạng thái</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu sẽ được render từ JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Form thông tin sản phẩm -->
+        <div class="box box-right">
+            <h2>Thông tin sản phẩm</h2>
+            <form action="">
+                <div class="row">
+                    <label for="productId">Mã sản phẩm</label>
+                    <div>
+                        <input type="text" name="productId" id="productId" placeholder="Nhập mã SP (VD: SP006)">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="productName">Tên sản phẩm</label>
+                    <div>
+                        <input type="text" name="productName" id="productName" placeholder="Nhập tên sản phẩm">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="quantity">Số lượng</label>
+                    <div>
+                        <input type="number" name="quantity" id="quantity" placeholder="Nhập số lượng">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="price">Đơn giá (VNĐ)</label>
+                    <div>
+                        <input type="number" name="price" id="price" placeholder="Nhập đơn giá">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="image">Đường dẫn ảnh</label>
+                    <div>
+                        <input type="text" name="image" id="image" placeholder="VD: images/abc.jpg">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="status">Trạng thái</label>
+                    <div>
+                        <select name="status" id="status">
+                            <option value="true">Còn hàng</option>
+                            <option value="false">Hết hàng</option>
+                        </select>
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <button data-val="0" class="btn btn-sua" id="btnAction">Đóng</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Nhúng thư viện jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

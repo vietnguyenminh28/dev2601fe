@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab03-ex9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background-color: #36393f;
+            border-radius: 6px;
+            width: fit-content;
+        }
+        .menu > li {
+            position: relative;
+            border-right: 1px solid #4a4d54;
+        }
+        .menu > li:last-child {
+            border-right: none;
+        }
+        .menu > li > a {
+            display: block;
+            padding: 15px 25px;
+            text-decoration: none;
+            color: #b9bbbe;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .menu > li > a:hover {
+            color: #ffffff;
+        }
+        .menu > li > a.active {
+            color: #43b581;
+        }
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #2f3136;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 180px;
+            border-radius: 0 0 6px 6px;
+        }
+        .submenu li {
+            border-bottom: 1px solid #3e4147;
+        }
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+        .submenu a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .submenu a:hover {
+            background-color: #36393f;
+            color: #43b581;
+        }
+        .menu > li:hover .submenu {
+            display: block;
+        }
+        .icon {
+            color: #43b581;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li>
+            <a href="#" class="active">Sản phẩm</a>
+            <ul class="submenu">
+                <li><a href="#"><span class="icon"></span> CSS3</a></li>
+                <li><a href="#"><span class="icon"></span> HTML5</a></li>
+                <li><a href="#"><span class="icon"></span> PHP</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Dịch vụ</a></li>
+        <li><a href="#">Giới thiệu</a></li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+</body>
+</html>

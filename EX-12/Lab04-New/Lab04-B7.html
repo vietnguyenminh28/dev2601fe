@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex7</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1000px;
+            width: 100%;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .col-left, .col-right {
+            flex: 1;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: #27ae60;
+        }
+
+        .intro-text {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn-detail {
+            display: inline-block;
+            padding: 6px 15px;
+            border: 1px solid #27ae60;
+            color: #27ae60;
+            text-decoration: none;
+            font-size: 13px;
+            border-radius: 3px;
+            transition: all 0.3s;
+        }
+
+        .btn-detail:hover {
+            background-color: #27ae60;
+            color: #fff;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        /* Chỉnh lại CSS cho icon dạng text/emoji */
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-title {
+            font-size: 13px;
+            color: #27ae60;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 5px 0;
+        }
+
+        .feature-desc {
+            font-size: 12px;
+            color: #777;
+            margin: 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Cột Trái: Giới thiệu -->
+        <div class="col-left">
+            <h2 class="section-title">Giới thiệu</h2>
+            <p class="intro-text">
+                CÔNG TY CP GEMACHEM VIỆT NAM thành lập năm 2007. Lĩnh vực kinh doanh chính là hóa chất công nghiệp và phân bón vô cơ. 100% hàng hóa nhập khẩu chính ngạch. Thị trường trải khắp cả nước. Khách hàng là các nhà máy, các khu công nghiệp, các nông trại, trang trại, các đại lý phân bón...
+            </p>
+            <a href="#" class="btn-detail">Chi tiết ></a>
+        </div>
+
+        <!-- Cột Phải: Các tính năng -->
+        <div class="col-right">
+            <h2 class="section-title">Tại sao chọn Gemachem</h2>
+            <div class="features-grid">
+                
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div>
+                        <h3 class="feature-title">Hóa chất chính hãng</h3>
+                        <p class="feature-desc">100% hàng hóa nhập khẩu chính ngạch</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🌐</div>
+                    <div>
+                        <h3 class="feature-title">Phân phối rộng khắp</h3>
+                        <p class="feature-desc">Thị trường trải khắp cả nước</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <div>
+                        <h3 class="feature-title">Vận chuyển linh hoạt</h3>
+                        <p class="feature-desc">Vận chuyển hàng hóa linh hoạt</p>
+                    </div>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <div>
+                        <h3 class="feature-title">Khách hàng</h3>
+                        <p class="feature-desc">Khách hàng đối tác tin cậy</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

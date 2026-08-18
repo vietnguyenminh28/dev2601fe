@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex4 (Tối giản)</title>
+    <style>
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin:0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #fff;
+
+        }
+
+        .news-container {
+            width: 360px;
+            background-color: #f2f2f2;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #333;
+            margin: 0 0 20px 0;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 45px;
+            height: 3px;
+            background-color: #4caf50;
+        }
+
+        .news-image {
+            width: 100%;
+            background-color: white;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .news-image img {
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 180px;
+        }
+
+        .news-title {
+            font-size: 17px;
+            color: #2c3e50;
+            margin: 20px 0 12px 0;
+            line-height: 1.4;
+        }
+
+        .news-meta {
+            display: flex;
+            align-items: center;
+            gap: 6px; /* Thay thế cho margin-right của svg cũ */
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+
+        .news-desc {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="news-container">
+        <h2 class="section-title">TIN TỨC</h2>
+        
+        <div class="news-image">
+            <img src="../images/b4.avif" alt="Chế phẩm hóa học" title="Chế phẩm hóa học là gì? Và">
+        </div>
+
+        <h3 class="news-title">Chế phẩm hóa học là gì? Và những điều cần lưu ý khi sử dụng</h3>
+        
+        <!-- Thay SVG bằng Emoji trực quan -->
+        <div class="news-meta">
+            🕒 06/06/2019
+        </div>
+        
+        <p class="news-desc">NaOH hay còn được gọi dưới cái tên Sodium hydroxide, tên gọi trong hóa học là Natri Hydroxit. Các dạng cấu trúc: xút vảy, xút hạt, xút lỏng....</p>
+    </div>
+</body>
+</html>

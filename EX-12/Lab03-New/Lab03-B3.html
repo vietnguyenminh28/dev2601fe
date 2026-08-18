@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab03-ex3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            background-color: #333;
+        }
+        
+        .menu > li {
+            position: relative;
+        }
+        
+        .menu > li > a {
+            display: block;
+            padding: 15px 30px;
+            text-decoration: none;
+            color: #e6b800;
+        }
+        
+        .menu > li:first-child > a {
+            background-color: #555;
+            color: #8ab4f8;
+        }
+        
+        .menu > li:hover > a {
+            background-color: #555;
+            color: #ffffff;
+        }
+        
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            list-style: none;
+            padding: 10px 0;
+            margin: 0;
+            min-width: 150px;
+        }
+        
+        .submenu > li > a {
+            display: block;
+            padding: 10px 30px;
+            text-decoration: none;
+            color: #002244;
+        }
+        
+        .submenu > li > a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .menu > li:hover .submenu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li>
+            <a href="#">Sản phẩm</a>
+            <ul class="submenu">
+                <li><a href="#">Laptop</a></li>
+                <li><a href="#">Điện thoại</a></li>
+                <li><a href="#">Phụ kiện</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Liên hệ</a></li>
+    </ul>
+
+</body>
+</html>

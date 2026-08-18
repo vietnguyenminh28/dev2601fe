@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex2 (Bản Cơ Bản)</title>
+    <style>
+        body {
+            margin: 0;
+            padding-top: 100px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .card {
+            width: 320px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            border-radius: 12px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            background: linear-gradient(rgba(20, 30, 48, 0.6), rgba(20, 30, 48, 0.6)), 
+                        url('../images/b3.avif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .card:hover {
+            background: linear-gradient(rgba(46, 160, 67, 0.85), rgba(46, 160, 67, 0.85)), 
+                        url('../images/b3.avif');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .icon-box {
+            width: 55px;
+            height: 55px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            line-height: 55px; 
+            font-size: 24px;
+        }
+
+        .service-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            margin: 0 0 10px 0;
+        }
+
+        .service-title {
+            font-size: 16px;
+            margin: 0 0 20px 0;
+        }
+
+        .btn-detail {
+            padding: 8px 25px;
+            border: 1px solid white;
+            border-radius: 20px;
+            background: transparent;
+            color: white;
+            cursor: pointer;
+        }
+
+        .btn-detail:hover {
+            background-color: white;
+            color: #2ea043;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon-box">💬</div>
+        <p class="service-label">Dịch vụ</p>
+        <h3 class="service-title">Tư vấn xuất khẩu lao động</h3>
+        <button class="btn-detail">Chi tiết</button>
+    </div>
+
+</body>
+</html>
