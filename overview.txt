@@ -1,0 +1,23 @@
+CSS
+1. Các cách CSS trong html
+-trong thẻ html
+-trong file html
+-ngoài file html
+2. 4 cách tương tác cơ bản với html
+- với tên ID của thẻ HTML 
+- Tên Class của thẻ HTML
+- Tên thẻ HTML
+- Tên thuộc tính và giá trị thuộc tính của thẻ HTML
+3. Một số bộ chọn ( tương tác ) với HTML nâng cao
+-tag01 tag02
+-tag01 > tag02
+-tag01 ~ tag02
+-tag01 + tag02
+-tag01,tag02
+4. Nguyên tắc cốt lỗi khi CSS
+- CSS viết sau sẽ được ưu tiên sử dụng hơn
+- !important> tên ID> tên thuộc tính và giá trị> tên class >tên thẻ
+- CSS càng chi tiết và càng gần càng được ưu tiên
+5. Các thuộc tính và giá trị thuộc tính của CSS
+-font,.....
+-....

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album ảnh</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header,section{
+           margin: 1 rem;
+        }
+        img{
+            width: 100%;
+            border-radius: .5rem;
+            cursor: pointer;
+        }
+        div.img-small{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: .5rem;
+        }
+        div.img-small > div{
+            width: 20%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Album ảnh</h1>
+    </header>
+    <section>
+        <div class="img-large">
+            <img src="images/a1.jpg" alt="Ảnh 1" id="large-image">
+        </div>
+        <div class="img-small">
+            <div><img src="images/a1.jpg" alt="Ảnh 1" class="small-image"></div>
+            <div><img src="images/a2.jpg" alt="Ảnh 2" class="small-image"></div>
+            <div><img src="images/a3.jpg" alt="Ảnh 3" class="small-image"></div>
+            <div><img src="images/a4.jpg" alt="Ảnh 4" class="small-image"></div>
+            <div><img src="images/a5.jpg" alt="Ảnh 5" class="small-image"></div>
+            <div><img src="images/a6.jpg" alt="Ảnh 6" class="small-image"></div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.small-image').click(function() {
+                let val = $(this).attr('src');
+                $('#large-image').attr('src', val).fadeOut(200).fadeIn(200);
+                $('.small-image').each(function() {
+                    $(this).css('border', 'none');
+                });
+                $(this).css('border', '2px solid green').siblings().css('border', 'none');
+            });
+        });
+    </script>
+</body>
+</html>

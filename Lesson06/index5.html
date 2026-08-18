@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <style>
+    div{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        animation-name: slideLeft;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes slideLeft {
+        from { transform: translateX(-100px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }
+</style>
+</head>
+<body>
+    
+</body>
+</html>

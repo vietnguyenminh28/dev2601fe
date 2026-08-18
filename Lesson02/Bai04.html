@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 4: Menu HTML</title>
+    <style>
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #ff6347; 
+            display: inline-flex;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .menu li {
+            border-right: 1.5px solid white;
+        }
+
+        .menu li:last-child {
+            border-right: none;
+        }
+
+        .menu a {
+            display: block;
+            color: yellow;
+            text-align: center;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 18px;
+        }
+
+        .menu a:hover {
+            background-color: #e5533d;
+        }
+    </style>
+</head>
+<body>
+
+
+    <ul class="menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khóa học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>
+
+</body>
+</html>

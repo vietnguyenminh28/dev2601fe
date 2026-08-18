@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dọc Bằng HTML</title>
+    <style>
+        /* Định dạng cho toàn bộ khung menu */
+        .vertical-menu {
+            list-style-type: none; /* Xóa dấu chấm tròn */
+            margin: 0;
+            padding: 0;
+            width: 250px; /* Khống chế chiều rộng của menu */
+            display: flex;
+            flex-direction: column; /* Ép các mục xếp dọc từ trên xuống */
+            gap: 3px; /* Tạo khoảng trắng (khe hở) giữa các dòng */
+        }
+
+        /* Định dạng chung cho các thẻ li */
+        .vertical-menu li {
+            background-color: #b3b3b3; /* Màu nền xám cho các mục */
+        }
+
+        /* Định dạng riêng cho mục đầu tiên (Trang chủ) */
+        .vertical-menu li:first-child {
+            background-color: #e6ccff; /* Đổi sang nền tím nhạt */
+            border-top-left-radius: 8px; /* Bo góc trên bên trái */
+            border-top-right-radius: 8px; /* Bo góc trên bên phải */
+        }
+
+        /* Định dạng cho chữ (thẻ a) */
+        .vertical-menu a {
+            display: block; /* Mở rộng vùng click ra toàn bộ ô */
+            color: yellow; /* Chữ màu vàng */
+            text-align: center; /* Căn giữa chữ */
+            padding: 15px; /* Khoảng cách từ chữ đến viền */
+            text-decoration: none; /* Xóa gạch chân của link */
+            font-family: 'Times New Roman', Times, serif; /* Font chữ có chân */
+            font-size: 20px;
+        }
+
+        /* Hiệu ứng khi di chuột vào */
+        .vertical-menu a:hover {
+            background-color: rgba(0, 0, 0, 0.1); /* Làm tối nền đi một chút khi hover */
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="vertical-menu">
+        <li><a href="#">Trang chủ</a></li>
+        <li><a href="#">Tin tức</a></li>
+        <li><a href="#">Sản phẩm</a></li>
+        <li><a href="#">Khóa học</a></li>
+        <li><a href="#">Liên hệ</a></li>
+        <li><a href="#">Đăng ký</a></li>
+        <li><a href="#">Đăng nhập</a></li>
+    </ul>
+
+</body>
+</html>

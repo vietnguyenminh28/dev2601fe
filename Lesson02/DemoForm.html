@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Ký Thành Viên Đầy Đủ</title>
+    <style>
+        /* CSS trang trí cho form đẹp mắt hơn */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #e9ecef; 
+            padding: 20px; 
+        }
+        .form-container { 
+            background-color: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            max-width: 600px; 
+            margin: auto; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+        }
+        h2 { text-align: center; color: #2c3e50; margin-top: 0; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { font-weight: bold; display: block; margin-bottom: 5px; color: #34495e; }
+        
+        /* Chỉnh label cho các ô radio và checkbox nằm ngang */
+        .inline-label { display: inline; font-weight: normal; margin-right: 20px; cursor: pointer; }
+        
+        /* Căn chỉnh các ô nhập liệu chung */
+        input[type="text"], input[type="email"], input[type="password"], input[type="date"], select, textarea {
+            width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 5px; box-sizing: border-box; font-size: 15px;
+        }
+        
+        fieldset { border: 1px solid #bdc3c7; border-radius: 8px; padding: 20px; margin-bottom: 20px; background-color: #fdfdfd; }
+        legend { font-weight: bold; color: #2980b9; padding: 0 10px; background-color: white; border-radius: 4px; border: 1px solid #bdc3c7;}
+        
+        .btn-group { text-align: center; margin-top: 25px; }
+        button { padding: 12px 25px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: bold; margin: 0 10px; transition: 0.3s; }
+        .btn-submit { background-color: #27ae60; color: white; }
+        .btn-submit:hover { background-color: #2ecc71; }
+        .btn-reset { background-color: #e74c3c; color: white; }
+        .btn-reset:hover { background-color: #c0392b; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Đăng Ký Thành Viên</h2>
+        
+        <!-- Bắt buộc có enctype="multipart/form-data" vì form này có tải file -->
+        <form action="/dang-ky-thanh-cong" method="POST" enctype="multipart/form-data">
+            
+            <!-- Phần 1: Gom nhóm Thông tin cơ bản -->
+            <fieldset>
+                <legend>1. Thông tin cá nhân</legend>
+                
+                <div class="form-group">
+                    <label for="fullname">Họ và Tên <span style="color:red;">*</span></label>
+                    <!-- autofocus: Tự động nháy chuột vào đây khi tải trang -->
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập đầy đủ họ tên..." required autofocus>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Địa chỉ Email <span style="color:red;">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pwd">Mật khẩu bảo mật <span style="color:red;">*</span></label>
+                    <!-- minlength="8": Bắt buộc mật khẩu phải từ 8 ký tự trở lên -->
+                    <input type="password" id="pwd" name="password" minlength="8" placeholder="Tối thiểu 8 ký tự" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="dob">Ngày sinh</label>
+                    <!-- type="date": Mở ra bảng lịch -->
+                    <input type="date" id="dob" name="dob">
+                </div>
+            </fieldset>
+
+            <!-- Phần 2: Gom nhóm Sở thích và Bổ sung -->
+            <fieldset>
+                <legend>2. Hồ sơ chi tiết</legend>
+
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <!-- Dùng Radio (Chỉ chọn 1) -->
+                    <input type="radio" id="male" name="gender" value="male" checked>
+                    <label for="male" class="inline-label">Nam</label>
+                    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="inline-label">Nữ</label>
+                </div>
+
+                <div class="form-group">
+                    <label>Sở thích (Hobbies):</label>
+                    <!-- Dùng Checkbox (Được chọn nhiều) -->
+                    <input type="checkbox" id="hobby1" name="hobbies" value="coding" checked>
+                    <label for="hobby1" class="inline-label">Lập trình</label>
+                    
+                    <input type="checkbox" id="hobby2" name="hobbies" value="gaming">
+                    <label for="hobby2" class="inline-label">Chơi game</label>
+                    
+                    <input type="checkbox" id="hobby3" name="hobbies" value="sports">
+                    <label for="hobby3" class="inline-label">Thể thao</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Thành phố sinh sống:</label>
+                    <!-- Thẻ Select: Danh sách thả xuống -->
+                    <select id="city" name="city">
+                        <option value="">-- Vui lòng chọn --</option>
+                        <option value="hn">Hà Nội</option>
+                        <option value="dn">Đà Nẵng</option>
+                        <option value="hcm">TP. Hồ Chí Minh</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="avatar">Tải ảnh đại diện (Avatar):</label>
+                    <!-- Thẻ tải file, accept="image/*" để giới hạn chỉ cho phép tải ảnh -->
+                    <input type="file" id="avatar" name="avatar" accept="image/*">
+                </div>
+            </fieldset>
+
+            <!-- Phần 3: Lời nhắn và Đồng ý điều khoản -->
+            <div class="form-group">
+                <label for="bio">Giới thiệu ngắn về bản thân:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Bạn có thể viết vài dòng giới thiệu tại đây..."></textarea>
+            </div>
+
+            <div class="form-group" style="text-align: center; margin-top: 20px;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" class="inline-label">Tôi đã đọc và đồng ý với các <b>Điều khoản dịch vụ</b> <span style="color:red;">*</span></label>
+            </div>
+
+            <!-- Nút điều khiển -->
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">Hoàn Tất Đăng Ký</button>
+                <button type="reset" class="btn-reset">Nhập Lại Từ Đầu</button>
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

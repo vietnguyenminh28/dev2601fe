@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator(+,-,*,/,%)</title>
+</head>
+<body>
+<br>
+        <h1>Calculator</h1>
+        <input type="number" id="num1" placeholder="Enter first number">
+</br>
+        <input type="number" id="num2" placeholder="Enter second number">
+        <div id="operator">
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('/')">/</button>
+            <button onclick="calculate('%')">%</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculate(operator) {
+            const num1 = parseFloat(document.getElementById('num1').value);
+            const num2 = parseFloat(document.getElementById('num2').value);
+            let result;
+            if (isNaN(num1) || isNaN(num2)) {
+                document.getElementById('result').innerText = 'Vui lòng nhập đủ cả hai số!';
+                return;
+            }
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 === 0) {
+                        result = 'Không thể chia cho 0';
+                    } else {
+                        result = num1 / num2;
+                    }
+                    break;
+                case '%':
+                    result = num1 % num2;
+                    break;
+                default:
+                    result = 'Phép tính không hợp lệ';
+            }
+            document.getElementById('result').innerText = `Result: ${result}`;
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- let result = eval(num1 + operator + num2);
+            document.getElementById('result').innerText = `Result: ${result}`; -->

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-class</title>
+        <style>
+            .link{
+                position: relative;
+
+            }
+            .link::after{
+                content: "";
+                height: 10px;
+                width: 0;
+                background-color: green;
+                position: absolute;
+                top:100%;
+                left: 0;
+                transition: width 0.5s;
+            }
+            .link:hover::after{
+                width: 100%;
+            }
+        </style>
+</head>
+<body>
+    <h1 class="link">Pseudo element</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident ut veniam nihil, perspiciatis consequuntur dolores laboriosam necessitatibus dolore corporis modi maiores officia tempora? Asperiores, libero ipsa saepe ea nulla expedita.</p>
+</body>
+</html>

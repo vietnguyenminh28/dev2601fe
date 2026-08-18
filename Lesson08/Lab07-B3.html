@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07-B3</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+
+        }
+        form, #ketQua{
+            width: 500px;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 1px solid green;
+            border-radius: 10px;
+        }
+        #ketQua{
+            display:none;
+        }
+        form>div{
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+        }
+        form>div>label{
+            width: 100px;
+            display: inline-block;
+            font-weight: bold;
+        }
+        input[type="text"]{
+            border: 1px solid green;
+            border-radius: 5px;
+            padding: 0.5rem;
+            width: calc(100% - 100px);
+        }
+        .btn{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+        button{
+            padding: 0.5rem 1rem;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM: Lấy và thay đổi thuộc tính value</h1>
+
+<form name="frm" action="" method="post">
+    <h1>THÔNG TIN</h1>
+    <div>
+        <label for="txtName">Name</label>
+        <input type="text" id="txtName" name="txtName" placeholder="Nhập tên...">
+    </div>
+    <div>
+        <label>Giới tính</label>
+        <div>
+            <input type="radio" name="gioiTinh" id="gtNam" value="Nam" checked>
+            <label for="gtNam">Nam</label>
+            
+            <input type="radio" name="gioiTinh" id="gtNu" value="Nữ">
+            <label for="gtNu">Nữ</label>
+            
+            <input type="radio" name="gioiTinh" id="gtKhac" value="Khác">
+            <label for="gtKhac">Khác</label>
+        </div>
+    </div>
+    <div>
+        <label>Sở thích</label>
+        <div>
+            <input type="checkbox" name="chkSoThich" id="bongDa" value="Bóng đá" checked>
+            <label for="bongDa">Bóng đá</label>
+            
+            <input type="checkbox" name="chkSoThich" id="boiLoi" value="Bơi lội">
+            <label for="boiLoi">Bơi lội</label>
+            
+            <input type="checkbox" name="chkSoThich" id="bongChuyen" value="Bóng chuyền">
+            <label for="bongChuyen">Bóng chuyền</label>
+        </div>
+    </div>
+    <div class="btn">
+        <button type="button" onclick="getData();">Lấy thông tin</button>
+        <button type="button" onclick="changeName();">Thay đổi tên</button>
+    </div>
+</form>
+<div id="ketQua"></div>
+<script>
+    function getData(){
+        debugger;
+        const name = document.getElementById("txtName").value;
+
+        let gt = document.getElementsByName("gioiTinh");
+        let gioiTinh = "";
+
+        for(let i = 0; i < gt.length; i++){
+            if(gt[i].checked){
+                gioiTinh = gt[i].value;
+            }
+        }
+        let st= document.getElementsByName("chkSoThich");
+        let soThich = [];
+
+        for(let i = 0; i < st.length; i++){
+            if(st[i].checked){
+                soThich.push(st[i].value);
+            }
+        }
+        console.log("Tên:", name);
+        console.log("Giới tính:", gioiTinh);
+
+        let sth = soThich.join(", ");
+        console.log("Sở thích:", sth);
+
+        let strInfo = `<h2>Xin Chào ${name}</h2>
+                       <p>Giới tính: ${gioiTinh}</p>
+                       <p>Sở thích: ${sth}</p>`;
+        document.getElementById("ketQua").innerHTML = strInfo;
+        document.getElementById("ketQua").style.display = "block";
+        return false;
+    }
+
+    const changeName = () => {
+        const newName = prompt("Nhập tên mới:");
+        if(newName){
+            document.getElementById("txtName").value = newName;
+        }
+    }
+</script>
+</body>
+</html>

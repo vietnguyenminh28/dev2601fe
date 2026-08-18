@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 04</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            margin: 1rem;
+        }
+        .tabs button{
+            border: solid 1px red;
+            padding: .5rem 1rem;
+            border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+            cursor: pointer;
+            border-bottom: none;
+        }
+        .content{
+            border: solid 1px red;
+            width: 500px;
+            min-height: 200px;
+        }
+        .actived{
+            border-bottom: solid 1px #fff;
+            background: #782a90 !important;
+            color: #FFF !important;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lab 04</h1>
+    </header>
+    <section>
+        <div class="tabs">
+            <button class="actived" data-file="html.html">HTML</button>
+            <button data-file="css.html">CSS</button>
+            <button data-file="jquery.html">JQuery</button>
+            <button data-file="php.html">PHP</button>
+        </div>
+        <div class="content"></div>
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.tabs button').click(function(){
+                $('.tabs button').removeClass('actived');
+                $(this).addClass('actived');
+                $(this).parent().siblings().load('tabs/' + $(this).attr('data-file'));
+                
+                // let file = $(this).attr('data-file');
+        
+                // $('.content').load('tabs/' + file);
+            })
+        })
+    </script>
+</body>
+</html>

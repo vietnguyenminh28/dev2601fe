@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07-B4</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1{
+            text-align: center;
+        }
+        section{
+            width: 500px;
+            margin: 1rem auto;
+            padding: 1rem;
+            border: 1px solid green;
+            border-radius: 10px;
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        button{
+            padding: 0.5rem 1rem;
+            border: 1px solid green;
+            border-radius: 5px;
+        }
+        .active{
+            background-color: green;
+            color: white;
+        }
+        .toggle{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Thao tác CSS với DOM</h1>
+        <div>
+            <button onclick="changeStyle()">style</button>
+            <button onclick="addClass()" id = "btnAddClass">classList.add</button>
+            <button onclick="removeClass()">classList.remove</button>
+            <button onclick="toggleClass()" id = "btnToggleClass">classList.toggle</button>
+        </div>
+    </section>
+    <script>
+        const changeStyle = () =>{
+            document.querySelector("section").style.backgroundColor = "yellow";
+            document.querySelector("section").style.color = "red";
+        }
+        const addClass = () =>{
+            document.getElementById("btnAddClass").classList.add("active");
+        }
+        const removeClass = () =>{
+            document.getElementById("btnAddClass").classList.remove("active");
+        }
+        const toggleClass = () =>{
+            document.getElementById("btnToggleClass").classList.toggle("toggle");
+        }
+    </script>
+</body>
+</html>

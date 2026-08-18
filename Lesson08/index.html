@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<br lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<br>
+    <h2 id="ten-tieu-de">Tiêu Đề</h2>
+    <button onclick="Thaydoitieude()"> Thay đổi tiêu đề</button>
+    <p class="content">Nội dung 1</p>
+    <p class="content">Nội dung 2</p>
+    <p class="content">Nội dung 3</p>
+    <button onclick="Thaydoimausac()">Thay đổi màu sắc</button></br>
+    <button onclick="Thaydoibackground()">Thay đổi background</button></br>
+    <button onclick="DOMCSSSelector()">DOM CSS Selector</button>
+
+    <button id="btn">Clickme</button>
+    <script>
+        function Thaydoitieude(){
+            document.getElementById("ten-tieu-de").innerHTML="Devmaster";
+        }
+
+        function Thaydoimausac(){
+            // document.getElementsByClassName("content")[0].style.color="red";
+            let content = document.getElementsByClassName("content")
+            for( let i=0; i< content.length; i++){
+                content[i].style.color = "red";
+            }
+        }
+        function Thaydoibackground(){
+            // document.getElementsByTagName("p")[0].style.background="yellow";
+            let content = document.getElementsByTagName("p")
+            for( let i=0; i< content.length; i++){
+                content[i].style.background = "yellow";
+            }
+        }
+        function DOMCSSSelector(){
+            document.querySelectorAll("#ten-tieu-de")[0].innerHTML="DOMCSSSelector"
+            let content= document.querySelectorAll(".content")
+            for (let i = 0; i < content.length; i++) {
+                content[i].style.color = "blue";    
+            }
+            let ten_the = document.querySelectorAll("p")
+            for (let i = 0; i < ten_the.length; i++) {
+                ten_the[i].style.background="#ccc";
+            }
+        }
+        document.getElementById("btn").onclick= function(){
+            alert("onclick")
+        }
+    </script>
+</body>
+</html>

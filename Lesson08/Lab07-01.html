@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM element: truy xuất tới thẻ HTML thông qua các thuộc tính</title>
+</head>
+<body>
+    <h1>DOM element: truy xuất tới thẻ HTML thông qua các thuộc tính</h1>
+    <hr>
+    
+    <div>
+        <p id="p1">getElementById('p1') - zone1</p>
+        <p class="p-class">getElementsByClassName('p-class')[0] - zone1</p>
+    </div>
+    
+    <div id="zone2">
+        <h2>getElementsByTagName('h2')[0] - zone2</h2>
+        <p>Thông tin</p>
+        <input type="text" value="Chung Trịnh *** Devmaster Academy!" size="50">
+    </div>
+    
+    <hr>
+    
+    <div id="ketQua">
+        <h2>Kết quả:</h2>
+        <h3 id="h31"></h3>
+        <h3 class="h-32"></h3>
+        <h3>
+            <p></p>
+        </h3>
+        <h3 id="h33"></h3>
+    </div>
+
+    <script>
+        const nd_p1 = document.getElementById("p1").innerHTML;
+        const nd_pclass = document.getElementsByClassName('p-class')[0].innerText;
+        const nd_tagName = document.getElementsByTagName("h2")[0].innerHTML;
+        const nd_selector = document.querySelectorAll("#zone2 > p")[0].innerText;
+        const nd_val = document.querySelector("#zone2 > input").value;
+
+        console.log("Nd p1:", nd_p1);
+        console.log("Nd p-class:", nd_pclass);
+        console.log("Nd h2:", nd_tagName);
+        console.log("Nd selector:", nd_selector);
+        console.log("Gt input:", nd_val);
+
+        document.getElementById("h31").innerHTML = nd_p1;
+        document.getElementsByClassName("h-32")[0].innerText = nd_pclass;
+        document.querySelector("#ketQua > h3 > p").innerHTML = "<span style='color:red'>" + nd_selector + "</span>";
+        document.getElementById("h33").innerHTML = nd_val;
+    </script>
+</body>
+</html>

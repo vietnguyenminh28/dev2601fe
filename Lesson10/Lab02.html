@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab02</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #main {
+            border: solid 1px #ccc;
+            padding: 10px;
+            width: 350px;
+        }
+        
+        .clearfix {
+            overflow: hidden;
+            clear: both;
+        }
+        
+        #main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #main ul li {
+            float: left;
+        }
+        
+        #main ul li a {
+            display: block;
+            border: solid 1px #ccc;
+            padding: 5px 10px;
+            text-decoration: none;
+            margin-right: 5px;
+        }
+        
+        #content {
+            padding: 15px 0;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .maudo {
+            color: red;
+        }
+        
+        .mauxanh {
+            color: green;
+        }
+        
+        .mauvang {
+            color: yellow;
+        }
+        
+        .maughi {
+            color: #666;
+        }
+        
+        .mautim {
+            color: violet   ;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Lab02</h1>
+    </header>
+    <section>
+        <h2>Thay đổi màu chữ</h2>
+        <div>
+            <button data-value="red">Màu đỏ</button>
+            <button data-value="green">Màu xanh</button>
+            <button data-value="yellow">Màu vàng</button>
+            <button data-value="gray">Màu ghi</button>
+            <button data-value="violet">Màu tím</button>
+            
+        </div>
+        <p class="noi-dung">Lap trinh web PHP</p>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log("Running...");
+
+
+            $("button").each(function(){
+               let val= $(this).attr("data-value");
+               console.log(val);
+               $(this).css('color', val);
+            });
+            //Khi clcik vào button thì thay đổi màu chữ của div.noi-dung
+            $("button").click(function(){
+                let val= $(this).attr("data-value");
+                $(".noi-dung").css('color', val);
+            });
+        });
+    </script>
+</body>
+</html>

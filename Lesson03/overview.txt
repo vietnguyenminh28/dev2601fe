@@ -1,0 +1,33 @@
+table 
+<table>
+<thead>
+    <tr>
+        <th>
+        <th>    
+    <tr>
+<thead>
+<tbody>
+    <tr>
+        <td>
+        <td>
+    <tr>    
+<tbody>
+<tfoot><tfoot>
+<table>
+
+
++thuộc tính :border, cellspacing,cellpading,rowspan,colspan
+form action, method,encryptype
+input type:txt, psass,email,...
+select option
+
+
+Cách nhớ thẻ CSS
+-font (kết hợp với các từ khóa: size, weight, family,...)
+-border (style,color,width)
+-border-radius:(tạo đường cong)(top, bottom,left,right)
+-margin/padding
+-color
+-background(kết hợp với 1 số từ khóa khác: color, image,...)
+-display: block(hiện lên),none(ẩn đi),flex,grid
+-height/width :(kết hợp với từ khóa khác min,max phía trước)

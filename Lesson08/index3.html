@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <style>
+        .err{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="email">email</label>
+        <input type="email" name="email" id="email"/>
+        <p class="err">Chưa đúng định dạng Email</p>
+    </div>
+    <div>
+        <label for="password">password</label>
+        <input type="password" name="password" id="password"/>
+         <p class="err">Chưa đúng định dạng password</p>
+    </div>
+    <div>
+        <button>Đăng nhập</button>
+        <button id="btn-hien-thi">Hiển thị mật khẩu</button>
+    </div>
+
+    <script>
+        // var regxEmail = /^[a-zA-Z0-9.]{6,10}@gmail\.com$/
+        // var regxPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/
+        // var inputEmail=  document.getElementById("email");
+        // var inputPass=  document.getElementById("password");
+        // document.getElementById("btn-hien-thi").onclick=function(){
+        //     if(inputPass.getAttribute("type")=== "password"){
+        //         inputPass.setAttribute("type","text");
+        //     }else{
+        //         inputPass.setAttribute("type","text");
+        //     }    
+        // }
+        // inputEmail.onblur = function(){
+        //     if(!regxEmail.test(inputEmail.value)){
+        //         this.nextElementSibling.style.display = "block"
+        //     }else{
+        //         this.nextElementSibling.style.display = "none"
+        //     }
+            
+        // }
+        // inputPass.onblur = function(){
+        //     if(!regxPass.test(inputPass.value)){
+        //         this.nextElementSibling.style.display = "block"
+        //     }else{
+        //         this.nextElementSibling.style.display = "none"
+        //     }
+            
+        // }
+                const regxEmail = /^[a-zA-Z0-9.]{6,10}@gmail\.com$/;
+        const regxPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/;
+
+        const inputEmail = document.getElementById("email");
+        const inputPass = document.getElementById("password");
+        const btnHienThi = document.getElementById("btn-hien-thi");
+
+        // 1. Sửa lỗi logic ẩn/hiện mật khẩu (dùng toán tử 3 ngôi)
+        btnHienThi.onclick = () => {
+            inputPass.type = inputPass.type === "password" ? "text" : "password";
+        };
+
+        // 2. Gộp chung logic kiểm tra tính hợp lệ (tránh lặp code)
+        const validateInput = (element, regex) => {
+            // Nếu test đúng -> "none" (ẩn lỗi), nếu sai -> "block" (hiện lỗi)
+            element.nextElementSibling.style.display = regex.test(element.value) ? "none" : "block";
+        };
+
+        // 3. Gắn sự kiện onblur
+        inputEmail.onblur = () => validateInput(inputEmail, regxEmail);
+        inputPass.onblur = () => validateInput(inputPass, regxPass);    
+    </script>
+</body>
+</html>

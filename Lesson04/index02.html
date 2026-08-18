@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            /* gap: 20px; */
+            background-color: rgb(97, 95, 95);
+        }
+        li{
+            padding: 15px 20px;
+            border-right:1px solid red;
+            position: relative;
+        }
+        ul :last-child {
+            border-right: none;
+        }
+        li:hover a{
+            color: green;
+        }
+        .menu2{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+        }
+        li:hover .menu2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Sản phẩm</a>
+                <ul class="menu2">
+                    <li><a href="#">CSS</a></li>
+                    <li><a href="#">HTML</a></li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

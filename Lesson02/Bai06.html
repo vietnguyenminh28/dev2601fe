@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 6: HTML Form</title>
+    <style>
+        /* Khung viền màu xanh bên ngoài */
+        .form-container {
+            border: 3px solid #99c2ff; 
+            padding: 20px;
+            width: 750px;
+            font-family: "Times New Roman", Times, serif; /* Sử dụng font chữ cổ điển giống ảnh */
+            margin: 20px auto;
+        }
+
+        .form-container h3 {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+
+        /* Dùng table để căn lề form thẳng tắp */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 6px 0;
+            vertical-align: top; /* Đẩy chữ lên trên cùng của ô (đặc biệt hữu ích cho phần Mô tả) */
+        }
+
+        /* Định dạng cột Tiêu đề bên trái */
+        .label-col {
+            width: 180px;
+            font-weight: bold;
+        }
+
+        /* Định dạng chiều rộng cho các ô nhập liệu */
+        input[type="text"], input[type="password"] {
+            width: 250px;
+        }
+        
+        #email {
+            width: 450px; /* Ô email dài hơn các ô khác */
+        }
+
+        textarea {
+            width: 300px;
+            height: 60px;
+        }
+
+        /* Định dạng khu vực nút bấm */
+        .btn-group {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 4px 15px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h3>Đăng ký thông tin người sử dụng</h3>
+        
+        <!-- Thẻ Form bọc toàn bộ Bảng -->
+        <form action="" method="post">
+            <table>
+                <tr>
+                    <td class="label-col"><label for="username">Tên đăng nhập</label></td>
+                    <td><input type="text" id="username" name="username"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="password">Mật khẩu</label></td>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="repassword">Nhập lại mật khẩu</label></td>
+                    <td><input type="password" id="repassword" name="repassword"></td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="email">Email</label></td>
+                    <td><input type="email" id="email" name="email"></td>
+                </tr>
+                <tr>
+                    <td class="label-col">Giới tính:</td>
+                    <td>
+                        <label><input type="radio" name="gender" value="nam" checked> Nam</label>
+                        <label><input type="radio" name="gender" value="nu"> Nữ</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Độ tuổi</td>
+                    <td>
+                        <label><input type="radio" name="age" value="under13" checked> Dưới 13 tuổi</label>
+                        <label><input type="radio" name="age" value="13to17"> Từ 13 đến 17 tuổi</label>
+                        <label><input type="radio" name="age" value="18to25"> Từ 18 đến 25 tuổi</label>
+                        <label><input type="radio" name="age" value="over25"> Trên 25 tuổi</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col">Sở thích của bạn:</td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="music"> Âm nhạc</label>
+                        <label><input type="checkbox" name="hobby" value="game"> Game</label>
+                        <label><input type="checkbox" name="hobby" value="sport"> Thể thao</label>
+                        <label><input type="checkbox" name="hobby" value="travel"> Du lịch</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="job">Nghề nghiệp</label></td>
+                    <td>
+                        <select id="job" name="job">
+                            <option value="">Chọn ngành nghề</option>
+                            <option value="it">Công nghệ thông tin</option>
+                            <option value="kt">Kinh tế</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label-col"><label for="description">Mô tả bản thân</label></td>
+                    <td>
+                        <!-- Đặt nội dung mặc định vào giữa thẻ mở và đóng của textarea -->
+                        <textarea id="description" name="description">Mô tả về bạn thân bạn...</textarea>
+                    </td>
+                </tr>
+            </table>
+            
+            <div class="btn-group">
+                <button type="submit">Đăng ký</button>
+                <button type="reset">Làm lại</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

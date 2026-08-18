@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Báo Cáo Nâng Cao</title>
+    <style>
+        /* CSS reset cơ bản và thiết lập font chữ */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+
+        /* Định dạng toàn bộ bảng */
+        .report-table {
+            width: 100%;
+            border-collapse: collapse; /* Xóa khoảng trống giữa các viền ô */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Đổ bóng cho bảng */
+        }
+
+        /* Định dạng Tiêu đề bảng (Caption) */
+        .report-table caption {
+            font-size: 24px;
+            font-weight: bold;
+            padding: 15px;
+            text-transform: uppercase;
+            color: #2c3e50;
+            background-color: #ecf0f1;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        /* Định dạng chung cho tất cả các ô */
+        .report-table th, .report-table td {
+            border: 1px solid #bdc3c7;
+            padding: 12px 15px;
+        }
+
+        /* Phần Header và Footer */
+        .report-table thead, .report-table tfoot {
+            background-color: #34495e;
+            color: #ffffff;
+        }
+
+        .report-table th {
+            text-align: center;
+        }
+
+        /* Nhấn mạnh dòng tổng của từng nhóm */
+        .group-total {
+            background-color: #f9ebea;
+            font-weight: bold;
+            color: #c0392b;
+        }
+
+        /* Căn lề cho dữ liệu số tiền */
+        .text-right { text-align: right; }
+        .text-center { text-align: center; }
+        
+        /* Hiệu ứng di chuột vào từng dòng (Hover) */
+        .report-table tbody tr:hover {
+            background-color: #f5f6fa;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="report-table">
+        <!-- 1. Tiêu đề của bảng -->
+        <caption>Báo Cáo Bán Hàng & Tồn Kho - Quý 3/2026</caption>
+
+        <!-- 2. Nhóm cột: Quản lý độ rộng cụ thể cho từng cột -->
+        <colgroup>
+            <col style="width: 5%;">  <!-- STT -->
+            <col style="width: 15%;"> <!-- Danh Mục -->
+            <col style="width: 30%;"> <!-- Tên Sản Phẩm -->
+            <col style="width: 15%;"> <!-- Đơn Giá -->
+            <col style="width: 10%;"> <!-- SL Bán -->
+            <col style="width: 10%;"> <!-- Tồn Kho -->
+            <col style="width: 15%;"> <!-- Thành Tiền -->
+        </colgroup>
+
+        <!-- 3. Đầu bảng (Header) -->
+        <thead>
+            <tr>
+                <th rowspan="2" scope="col">STT</th>
+                <th rowspan="2" scope="col">Danh Mục</th>
+                <th rowspan="2" scope="col">Tên Sản Phẩm</th>
+                <th rowspan="2" scope="col">Đơn Giá (VNĐ)</th>
+                <th colspan="2" scope="colgroup">Số Lượng</th>
+                <th rowspan="2" scope="col">Tổng Doanh Thu (VNĐ)</th>
+            </tr>
+            <tr>
+                <th scope="col">Đã Bán</th>
+                <th scope="col">Tồn Kho</th>
+            </tr>
+        </thead>
+
+        <!-- 4. Thân bảng thứ nhất: Dành cho Đồ Điện Tử -->
+        <tbody>
+            <tr>
+                <td class="text-center">1</td>
+                <!-- Gộp 2 dòng cho danh mục Điện Tử -->
+                <td rowspan="2" style="font-weight: bold; background-color: #e8f8f5;">Đồ Điện Tử</td>
+                <td>Laptop Dell XPS 15</td>
+                <td class="text-right">35.000.000</td>
+                <td class="text-center">10</td>
+                <td class="text-center">5</td>
+                <td class="text-right">350.000.000</td>
+            </tr>
+            <tr>
+                <td class="text-center">2</td>
+                <td>MacBook Pro 14 M2</td>
+                <td class="text-right">45.000.000</td>
+                <td class="text-center">8</td>
+                <td class="text-center">12</td>
+                <td class="text-right">360.000.000</td>
+            </tr>
+            <!-- Dòng tổng phụ của nhóm Điện Tử -->
+            <tr class="group-total">
+                <td colspan="4" class="text-right">Tổng nhóm Điện Tử:</td>
+                <td class="text-center">18</td>
+                <td class="text-center">17</td>
+                <td class="text-right">710.000.000</td>
+            </tr>
+        </tbody>
+
+        <!-- 5. Thân bảng thứ hai: Dành cho Đồ Gia Dụng -->
+        <tbody>
+            <tr>
+                <td class="text-center">3</td>
+                <!-- Gộp 2 dòng cho danh mục Gia Dụng -->
+                <td rowspan="2" style="font-weight: bold; background-color: #fef9e7;">Đồ Gia Dụng</td>
+                <td>Tủ lạnh Samsung Inverter</td>
+                <td class="text-right">12.000.000</td>
+                <td class="text-center">20</td>
+                <td class="text-center">30</td>
+                <td class="text-right">240.000.000</td>
+            </tr>
+            <tr>
+                <td class="text-center">4</td>
+                <td>Nồi chiên không dầu Philips</td>
+                <td class="text-right">3.500.000</td>
+                <td class="text-center">50</td>
+                <td class="text-center">15</td>
+                <td class="text-right">175.000.000</td>
+            </tr>
+            <!-- Dòng tổng phụ của nhóm Gia Dụng -->
+            <tr class="group-total">
+                <td colspan="4" class="text-right">Tổng nhóm Gia Dụng:</td>
+                <td class="text-center">70</td>
+                <td class="text-center">45</td>
+                <td class="text-right">415.000.000</td>
+            </tr>
+        </tbody>
+
+        <!-- 6. Chân bảng (Footer) - Tính tổng toàn bộ báo cáo -->
+        <tfoot>
+            <tr>
+                <th colspan="4" class="text-right" scope="row" style="font-size: 18px;">TỔNG DOANH THU QUÝ 3:</th>
+                <th class="text-center" style="font-size: 18px;">88</th>
+                <th class="text-center" style="font-size: 18px;">62</th>
+                <th class="text-right" style="font-size: 18px; color: #f1c40f;">1.125.000.000</th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

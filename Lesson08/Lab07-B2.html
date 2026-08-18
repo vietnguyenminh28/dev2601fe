@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab07-B2</title>
+</head>
+<body>
+    <h1>Thao tác với thuộc tính của HTML</h1>
+    <h3>Thay đổi ảnh</h3>
+    <div>
+        <img id="image" src="https://picsum.photos/200" alt="picture" width="500" height="333">
+    </div>
+    <button onclick="changeImage()">Thay đổi ảnh</button>
+    <script>
+        function changeImage() {
+            document.getElementById("image").src = "https://devmaster.edu.vn/images/logo.png";
+        }
+    </script>
+</body>
+</html>

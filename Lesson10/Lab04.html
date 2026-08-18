@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 04</title>
+     <style>
+        .clearfix {
+            clear: both;
+            overflow: hidden;
+        }
+        #main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #main ul li {
+            float: left;
+            margin-right: 5px;
+        }
+        #main ul li a {
+            border-left: solid 1px #ccc;
+            border-right: solid 1px #ccc;
+            border-top: solid 1px #ccc;
+            padding: 8px 20px;
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            text-decoration: none;
+            background: #d2d3d5;
+            color: #000;
+            border-bottom: none;
+        }
+        
+        .selected {
+            border-bottom: solid 1px #fff;
+            background: #782a90 !important;
+            color: #FFF !important;
+        }
+        #content {
+            border: solid 1px red;
+            width: 500px;
+            height: 300px;
+            margin-top: -1px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main" class="clearfix">
+        <ul class="clearfix">
+            <li><a href="javascript:void(0)" class="selected" id="html">HTML</a></li>
+            <li><a href="javascript:void(0)" id="css">CSS</a></li>
+            <li><a href="javascript:void(0)" id="jquery">Jquery</a></li>
+            <li><a href="javascript:void(0)" id="php">PHP</a></li>
+        </ul>
+        <div id="content">
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#content").load("tabs/html.html");
+            $("#main ul li").click(function(){
+                $("#main ul li a").removeClass("selected");
+                $(this).find("a").addClass("selected");
+                var tabId = $(this).find("a").attr("id");
+                $("#content").load("tabs/" + tabId + ".html");
+            });
+        });
+    </script>
+</body>
+</html>

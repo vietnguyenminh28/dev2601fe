@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 50px 200px 100px;
+            grid-template-areas: 
+            "header header"
+            "sidebar content"
+            "footer footer";
+        }
+        header{
+            grid-area:header;
+            background-color: red;
+        }
+         .sidebar{
+            grid-area:sidebar;
+            background-color: green;
+        }
+         .content{
+            grid-area:content;
+            background-color: lightcoral;
+        }
+         footer{
+            grid-area:footer;
+            background-color: lightgray;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        header
+    </header>
+    <section class="sidebar">Sidebar</section>
+    <section class="content">Nội dung</section>
+    <footer>footer</footer>
+</body>
+</html>

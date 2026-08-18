@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selector nâng cao</title>
+    <style>
+        /* tag01 tag02: CSS tag02 nằm trong tag01 */
+        div h2{
+            color: red;
+        }
+        #box1 span{
+            background-color: #f0f0f0;
+            color: red;
+        }
+        #box2>span{
+            background-color: #f0f0f0;
+            color: blue;
+        }
+        #box3>p+p{
+            background-color: #f0f0f0;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+        <span>tag01 tag02</span>
+        <p>
+            <span>tag01 tag02</span>
+        </p>
+    </div>
+
+     <div id="box2">
+        <span>tag01 < tag02</span>
+        <p>
+            <span>tag01 < tag02</span>
+        </p>
+    </div>
+
+    <div id="box3">
+        <p>tag01 + tag02</p>
+        <span>tag01 + tag02</span>
+        <span>tag01 + tag02</span>
+    </div>
+</body>
+</html>
