@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab06-ex4.html</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+        }
+        h3 {
+            font-weight: normal;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 18px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px 40px;
+            vertical-align: top;
+        }
+        .align-left {
+            text-align: left;
+        }
+        .align-right {
+            text-align: right;
+        }
+        .row-title td {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h3><b>Bài tập 4:</b> Tạo trang <i>Lab06-ex4.html</i> như hình sau</h3>
+
+    <table>
+        <tr>
+            <td id="h1" class="align-left"></td>
+            <td id="h2" class="align-right"></td>
+            <td id="h3" class="align-right"></td>
+            <td id="h4" class="align-left"></td>
+        </tr>
+        <tr class="row-title">
+            <td>Hình 1</td>
+            <td>Hình 2</td>
+            <td>Hình 3</td>
+            <td>Hình 4</td>
+        </tr>
+    </table>
+
+    <script>
+        let str1 = "";
+        for (let i = 0; i <= 9; i++) {
+            for (let j = 0; j <= i; j++) {
+                str1 += j;
+            }
+            str1 += "<br>";
+        }
+
+        let str2 = "";
+        for (let i = 9; i >= 0; i--) {
+            for (let j = 0; j <= i; j++) {
+                str2 += j;
+            }
+            str2 += "<br>";
+        }
+
+        document.getElementById("h1").innerHTML = str1;
+        document.getElementById("h2").innerHTML = str2;
+        document.getElementById("h3").innerHTML = str1;
+        document.getElementById("h4").innerHTML = str2;
+    </script>
+
+</body>
+</html>

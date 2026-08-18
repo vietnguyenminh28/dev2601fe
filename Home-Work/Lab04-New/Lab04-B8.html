@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex8</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-container {
+            background-color: #0b9e4a;
+            color: #ffffff;
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            gap: 40px;
+            padding: 40px;
+            box-sizing: border-box;
+        }
+
+        .col-1 { flex: 1.2; }
+        .col-2 { flex: 0.8; }
+        .col-3 { flex: 1; }
+        
+        .company-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        /* Đổi style logo từ định dạng SVG sang dạng text/emoji */
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            font-size: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .company-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+
+        .info-text {
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+        }
+
+        .info-text p {
+            margin: 0;
+        }
+
+        .info-label {
+            font-weight: bold;
+        }
+        
+        .widget-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0 0 20px 0;
+        }
+
+        .product-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 35px 0;
+        }
+
+        .product-list li {
+            margin-bottom: 12px;
+        }
+
+        .product-list a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 13px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Thêm font-weight và color để chữ cái bên trong đẹp hơn */
+        .social-icon {
+            width: 32px;
+            height: 32px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            color: #ffffff;
+        }
+        
+        .map-wrapper {
+            width: 100%;
+            height: 220px;
+            background-color: #eee;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="footer-container">
+        
+        <!-- Cột 1: Thông tin công ty -->
+        <div class="col-1">
+            <div class="company-header">
+                <!-- Thay SVG bằng Emoji -->
+                <div class="logo-icon">🌱</div>
+                <h2 class="company-name">Công ty TNHH<br>Công nghệ xanh<br>Thành Châu</h2>
+            </div>
+            
+            <div class="info-text">
+                <span class="info-label">Địa chỉ:</span>
+                <p>Số 9, ngách 41, ngõ 107 phố Thúy Lĩnh, phường Lĩnh Nam, thành phố Hà Nội, Việt Nam</p>
+            </div>
+            
+            <div class="info-text">
+                <span class="info-label">Email:</span>
+                <p>thanhchaucnx@gmail.com</p>
+                <p>cnxthanhchau@gmail.com</p>
+            </div>
+            
+            <div class="info-text">
+                <span class="info-label">Điện thoại:</span> 0933785888
+            </div>
+            
+            <div class="info-text">
+                <span class="info-label">Địa chỉ giao dịch:</span>
+                <p>Số 04, Khu nhà ở thấp tầng Bắc Việt, phố Sa Đôi, phường Tây Mỗ, thành phố Hà Nội, Việt Nam</p>
+            </div>
+        </div>
+        
+        <!-- Cột 2: Sản phẩm & Mạng xã hội -->
+        <div class="col-2">
+            <h3 class="widget-title">Danh mục sản phẩm</h3>
+            <ul class="product-list">
+                <li><a href="#">Chế phẩm sinh học</a></li>
+                <li><a href="#">Phân bón vi sinh</a></li>
+                <li><a href="#">Chế phẩm vi sinh vật</a></li>
+            </ul>
+            
+            <h3 class="widget-title">Liên kết mạng xã hội</h3>
+            <div class="social-links">
+                <!-- Thay SVG bằng các chữ cái đại diện -->
+                <div class="social-icon">F</div>
+                <div class="social-icon">Z</div>
+                <div class="social-icon">Y</div>
+                <div class="social-icon">in</div>
+            </div>
+        </div>
+        
+        <!-- Cột 3: Bản đồ -->
+        <div class="col-3">
+            <h3 class="widget-title">Bản đồ</h3>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.294868019313!2d105.88242487499933!3d20.9808129806563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ae8729352e85%3A0xc34cc42ec8fb2070!2zTMOobmggTmFtLCBIb8OgbmcgTWFpLCBIw6AgTuG7mWk!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

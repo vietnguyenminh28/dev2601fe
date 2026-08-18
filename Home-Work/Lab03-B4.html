@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        fieldset {
+            width: 830px; 
+            font-family: Arial, sans-serif;
+        }
+        video {
+            width: 500px; 
+            height: auto;
+            display: block;
+        }
+        img {
+            width: 120px; 
+            height: 80px; 
+            object-fit: cover;
+            display: block;
+        }
+        td {
+            padding: 5px;
+            vertical-align: top;
+        }
+        
+        h3 {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Bạn đang xem video</legend>
+        <table width="800" border="1" cellspacing="0">
+            <tr>
+                <td rowspan="6">
+                    <video controls="controls" loop="loop" poster="images/cat.jpg">
+                        <source src="video/video1.mp4" type="video/mp4">
+                        <source src="video/movie.ogg" type="video/ogg">
+                        trình duyệt của bạn không hỗ trợ định dạng file này
+                    </video>
+                </td>
+                <td>
+                    <img src="images/img1.jpg" alt="">
+                </td>
+                <td>
+                    <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/img2.jpg" alt="">
+                </td>
+                <td>
+                    <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/img3.jpg" alt="">
+                </td>
+                <td>
+                    <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/img4.jpg" alt="">
+                </td>
+                <td>
+                    <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/img5.jpg" alt="">
+                </td>
+                <td>
+                    <h3><a href="">Lorem ipsum dolor sit amet.</a></h3>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>

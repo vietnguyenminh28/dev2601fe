@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab04-ex9</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .section-container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #8cc63f;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            color: #00a651;
+            font-size: 22px;
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .btn-view-all {
+            background-color: #fff200;
+            color: #00a651;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 6px 15px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .product-grid {
+            display: flex;
+            gap: 20px;
+        }
+
+        .product-card {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            display: flex;
+            flex-direction: column;
+            background-color: #00a651;
+        }
+
+        .img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 180px;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .product-card:hover .img-overlay {
+            opacity: 1;
+        }
+
+        .btn-more {
+            color: #fff200;
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+        }
+
+        .product-info {
+            padding: 12px 15px;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-size: 14px;
+            margin: 0 0 15px 0;
+            line-height: 1.4;
+            min-height: 40px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            margin-top: auto;
+        }
+
+        .price-view-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .icon-text {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .btn-buy {
+            background-color: #fff200;
+            color: #00a651;
+            border: none;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="section-container">
+        
+        <!-- Phần tiêu đề -->
+        <div class="section-header">
+            <h2 class="section-title">Phân bón vi sinh</h2>
+            <a href="#" class="btn-view-all">
+                Xem tất cả &raquo;
+            </a>
+        </div>
+
+        <!-- Lưới sản phẩm -->
+        <div class="product-grid">
+            
+            <!-- Sản phẩm 1 -->
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1628157588553-5eeea00af15c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Phân bón vi sinh Thành Châu">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Phân bón vi sinh Thành Châu<br>(Azotobacterin)</h3>
+                    <div class="product-footer">
+                        <div class="price-view-group">
+                            <span class="icon-text">🏷️ Liên hệ giá</span>
+                            <span class="icon-text">👁️ 193</span>
+                        </div>
+                        <button class="btn-buy">Mua hàng &raquo;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 2 -->
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590212356877-e685f0b540fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hoa lan">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sản phẩm đang cập nhật ...</h3>
+                    <div class="product-footer">
+                        <span class="icon-text">🏷️ 0.000 đ</span>
+                        <button class="btn-buy">Mua hàng &raquo;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sản phẩm 3 -->
+            <div class="product-card">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1590212356877-e685f0b540fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Hoa lan">
+                    <div class="img-overlay">
+                        <a href="#" class="btn-more">XEM THÊM</a>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Sản phẩm đang cập nhật ...</h3>
+                    <div class="product-footer">
+                        <span class="icon-text">🏷️ 0.000 đ</span>
+                        <button class="btn-buy">Mua hàng &raquo;</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

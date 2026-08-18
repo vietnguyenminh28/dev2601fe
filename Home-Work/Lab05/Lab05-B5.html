@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab06-ex5.html</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 18px;
+        }
+        #pyramid {
+            text-align: center;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="pyramid"></div>
+
+    <script>
+        let result = "";
+        
+        for (let i = 0; i <= 9; i++) {
+            let row = "";
+            
+            for (let j = 0; j <= i; j++) {
+                row += j + " ";
+            }
+            
+            for (let j = i - 1; j >= 0; j--) {
+                row += j + " ";
+            }
+            
+            result += row.trim() + "<br>";
+        }
+        
+        document.getElementById("pyramid").innerHTML = result;
+    </script>
+
+</body>
+</html>
