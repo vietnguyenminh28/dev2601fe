@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab06-ex3</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .box {
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            padding: 30px 40px;
+            width: 350px;
+            text-align: center;
+        }
+
+        .box h2 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #4CAF50;
+            border-radius: 25px;
+            box-sizing: border-box;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .btn-calc {
+            background-color: #4CAF50;
+            color: yellow;
+            font-weight: bold;
+            border: none;
+            border-radius: 25px;
+            padding: 12px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        .btn-calc:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>Tính số ngày</h2>
+        
+        <div class="input-group">
+            <input type="number" id="month" placeholder="Nhập tháng:">
+        </div>
+        
+        <div class="input-group">
+            <input type="number" id="year" placeholder="Nhập năm:">
+        </div>
+        
+        <button type="button" class="btn-calc" onclick="calculateDays()">Tính số ngày</button>
+        
+        <div class="input-group">
+            <input type="text" id="result" placeholder="Kết quả:" readonly>
+        </div>
+    </div>
+
+    <script>
+        function calculateDays() {
+            let month = parseInt(document.getElementById("month").value);
+            let year = parseInt(document.getElementById("year").value);
+            let resultInput = document.getElementById("result");
+
+            if (isNaN(month) || isNaN(year) || month < 1 || month > 12) {
+                resultInput.value = "Dữ liệu không hợp lệ!";
+                return;
+            }
+
+            let days = 0;
+            switch (month) {
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                    days = 31;
+                    break;
+                case 4: case 6: case 9: case 11:
+                    days = 30;
+                    break;
+                case 2:
+                    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                        days = 29;
+                    } else {
+                        days = 28;
+                    }
+                    break;
+            }
+
+            resultInput.value = "Tháng " + month + " năm " + year + " có " + days + " ngày.";
+        }
+    </script>
+
+</body>
+</html>
