@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fcfcfc;
+    color: #333;
+}
+
+.navbar {
+    padding: 15px 0;
+    background-color: #fff;
+}
+
+.navbar-brand img {
+    height: 70px;
+    object-fit: contain;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 700;
+    color: #333 !important;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, 
+.navbar-nav .nav-link.active {
+    color: #c0a062 !important;
+}
+
+.banner-img {
+    height: 550px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.custom-indicators {
+    bottom: 20px;
+}
+
+.custom-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: none;
+    margin: 0 6px;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.custom-indicators .active {
+    background-color: #c0a062;
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.custom-nav-btn {
+    width: 8%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.carousel:hover .custom-nav-btn {
+    opacity: 1;
+}
+
+.nav-circle {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.nav-circle:hover {
+    background-color: #fff;
+    color: #c0a062;
+    transform: scale(1.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 10px;
+}
+
+.section-title {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin: 0;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 100%; 
+    height: 4px;
+    background-color: #c0a062;
+}
+
+.view-all {
+    color: #555;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s;
+}
+
+.view-all:hover {
+    color: #c0a062;
+}
+
+.product-card {
+    border: none;
+    background: transparent;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card .card-img-top {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 15px;
+    background-color: #f4f4f4;
+}
+
+.product-card .card-title {
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.stars {
+    color: #c0a062;
+    font-size: 11px;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.product-desc {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: 800;
+    font-size: 14px;
+    color: #333;
+}
+
+section.container.my-5 {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+}
+
+footer {
+    background-color: #3a3a3a;
+    color: #ffffff;
+    padding: 60px 0 40px 0;
+    margin-top: 80px;
+    font-size: 14px;
+}
+
+footer h6 {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fff;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+footer .company-name {
+    font-weight: 800;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #cccccc;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+}
+
+footer p i {
+    width: 25px;
+    color: #fff;
+}
+
+footer a {
+    color: #cccccc;
+    text-decoration: none;
+    margin-bottom: 12px;
+    display: block;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #c0a062;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.social-icons a:hover {
+    border-color: #c0a062;
+    background-color: #c0a062;
+    color: #fff;
+}
+
+.bocongthuong-logo {
+    height: 45px;
+    object-fit: contain;
+}
